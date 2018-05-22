@@ -8,10 +8,10 @@ Package.describe({
 Package.on_use(function (api) {
     api.versionsFrom('1.4.4.1');
     api.use(['routepolicy','webapp','underscore', 'service-configuration'], 'server');
-    api.use(['http','accounts-base','random'], ['client', 'server']);
+    api.use(['http','accounts-base','random'], ['server']);
 
     api.add_files(['saml_server.js','saml_utils.js'], 'server');
-	api.add_files('saml_client.js', 'client');
+
 });
 
 Package.onTest((api) => {
@@ -54,8 +54,8 @@ Npm.depends({
     "xmldom": "0.1.27",
     "connect": "3.6.0",
     "querystring": "0.2.0",
-    "arraybuffer-to-string": "1.0.1"
-//    "xml-encryption": "0.10.0"
+    "arraybuffer-to-string": "1.0.1",
+    "xml-encryption": "0.11.1"
 });
 
 // Npm.depends({
